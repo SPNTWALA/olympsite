@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon.svg" type="image/svg">
     <link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,15 +25,21 @@
                         <span class="header_h2">Южно-Уральского технологического университета</span>
                     </h1>
                 </div>
-                <!-- <div class="header_btn">
-                    <button class="reg_btn" onclick="openFormAuth()">
-                        Войти
+                <div class="nav">
+                    <button class="navbar" type="button">
+                        <img src="img/login.svg" width="50px">
                     </button>
-                    <p>/</p>
-                    <button class="reg_btn reg" onclick="openFormReg()">
-                        Зарегистрироваться
-                    </button>
-                </div> -->
+                    <div class="header_btn-profile">
+                        <button class="profile_btn">
+                            <a href="persAc.html">
+                                Профиль
+                            </a>
+                        </button>
+                        <button class="out_btn">
+                            Выйти
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
     </header>
@@ -41,10 +47,11 @@
         <section>
             <div class="container olymp_wrapper">
                 <div class="olymp_name">
-                    <img class="olymp_block-logo" src="img/it.png" alt="">
+                    <img class="olymp_block-logo" src="img/it.svg" alt="">
                     <h1 class="olymp_h1">
                         X Всероссийская олимпиада по информационным технологиям
                     </h1>
+                    <p class="olymp_date">актуально до 10 ноября</p>
                 </div>
                 <div class="olymp_text">
                     <p>
@@ -99,21 +106,8 @@
                     <a class="olymp_link-txt" href="">Скачать информационное письмо</a>
                 </div>
                 <div class="olymp_all-btn">
-                    <button class="btn olymp_block-btn">Участвовать</button>
+                    <a href="olymptask.html" class="btn olymp_block-btn">Участвовать</a>
                 </div>
-            </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="olymp_link">
-                    <a class="olymp_link-txt" href="">Скачать положение</a>
-                    <a class="olymp_link-txt" href="">Скачать информационное письмо</a>
-                </div>
-                <form action="">
-                    <div class="olymp_file">
-                        <input type="file" name="" id="">
-                    </div>
-                </form>
             </div>
         </section>
     </main>
@@ -154,5 +148,6 @@
             </div>
         </section>
     </footer>
+
 </body>
 </html>
