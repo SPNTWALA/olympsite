@@ -56,6 +56,14 @@ olympBlock.forEach((item, i) => {
     leftBtn[i].addEventListener('click', () => {
         item.scrollLeft -= blockWidth/2;
     });
+    if (blockWidth <= 510) {
+        rightBtn[i].addEventListener('click', () => {
+            item.scrollLeft += blockWidth;
+        });
+        leftBtn[i].addEventListener('click', () => {
+            item.scrollLeft -= blockWidth;
+        });
+    }
 });
 
 const nav = document.getElementById("navbar-toggler");

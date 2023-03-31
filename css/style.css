@@ -39,10 +39,6 @@ body::-webkit-scrollbar-thumb {
 a {
     text-decoration: none;
 }
-a:hover, a:focus {
-    color: #EF6010;
-    transition: .15s ease-in-out;
-}
 ul, ol {
     margin-left: 30px;
 }
@@ -64,6 +60,10 @@ button, input[type=submit] {
 input[type=submit]:hover, 
 input[type=submit]:focus {
     background-color: #EF6010;
+    transition: .15s ease-in-out;
+}
+.link:hover, .link:focus {
+    color: #EF6010;
     transition: .15s ease-in-out;
 }
 
@@ -638,7 +638,6 @@ input[type=submit]:focus {
     background-color: #DEFDFE;
     box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.1);
     transition: 0.5s ease-in-out;
-    
 }
 .profile_btn, .out_btn {
     display: flex;
@@ -803,7 +802,7 @@ input[type=submit]:focus {
     margin-bottom: 20px;
 }
 .form_field-text {
-    border-radius: 27px;
+    border-radius: 6px;
 }
 .form_field:focus, .form_field-text:focus {
     outline: none;
@@ -897,6 +896,42 @@ input[type=checkbox]:checked:after {
     margin-bottom: 15px;
 }
 
-/*-----confid-----*/
-
-/*-----agree-----*/
+/*-----myolymp-----*/
+.olymp_list {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.olymp_list-item {
+    border-top: #335C5D 1px solid;
+    padding: 20px;
+}
+.olymp_list-item:first-child {
+    border-top: none;
+}
+.olymp_list-h3, .olymp_list-date, 
+.olymp_cert-name, .cert_load {
+    padding-bottom: 20px;
+}
+.olymp_cert-dload {
+    display: block;
+    background-color: #335C5D;
+    border: none;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 10px;
+}
+.olymp_cert-dload:hover,
+.olymp_cert-dload:focus {
+    background-color: #EF6010;
+}
+.olymp_cert-dload:disabled {
+    cursor: default;
+    background-color: #b6b6b6;
+}
+.cert_load, .cert_load:visited {
+    color: #fff;
+}
+.link_olymp {
+    padding-top: 20px;
+}
