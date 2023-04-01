@@ -45,8 +45,8 @@ stageTitles.forEach.call(stageTitles, function (stageTitle) {
 
 //slider
 const olympBlock = document.querySelectorAll('.wrapper_block');
-const rightBtn = document.querySelectorAll('.olymp_arrow-right');
-const leftBtn = document.querySelectorAll('.olymp_arrow-left');
+const rightBtn = document.querySelectorAll('.olymp_right');
+const leftBtn = document.querySelectorAll('.olymp_left');
 olympBlock.forEach((item, i) => {
     let blockDemisions = item.getBoundingClientRect();
     let blockWidth = blockDemisions.width;

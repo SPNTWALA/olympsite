@@ -93,6 +93,7 @@ input[type=submit]:focus {
 }
 .logo {
     width: 55px;
+    height: 52px;
     margin-right: 10px;
 }
 .header_text {
@@ -215,6 +216,8 @@ input[type=submit]:focus {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    height: auto;
+    width: auto;
 }
 
 .confid_info {
@@ -351,6 +354,8 @@ input[type=submit]:focus {
 .stage_img {
     border-radius: 20px;
     margin-top: -37px;
+    width: auto;
+    height: auto;
 }
 
 @media(max-width: 1110px) {
@@ -403,7 +408,7 @@ input[type=submit]:focus {
     display: flex;
     align-items: center;
 }
-.olymp_arrow-left, .olymp_arrow-right {
+.olymp_left, .olymp_right {
     width: 60px;
     height: 60px;
     border-radius: 7px;
@@ -411,21 +416,21 @@ input[type=submit]:focus {
     margin-right: 20px;
     border: none;
 }
-.olymp_arrow-left {
+.olymp_left {
     background: url(../img/arrow-left.png) #EF6010 no-repeat center;
 }
-.olymp_arrow-right {
+.olymp_right {
     background: url(../img/arrow-left.png) #EF6010 no-repeat center;
     transform: rotate(-180deg);
 }
-.olymp_arrow-left:hover,
-.olymp_arrow-left:focus {
+.olymp_left:hover,
+.olymp_left:focus {
     background: url(../img/arrow-right.png) #F9FAFF no-repeat center;
     transform: rotate(-180deg);
     transition: background-color .15s ease-in-out;
 }
-.olymp_arrow-right:hover,
-.olymp_arrow-right:focus {
+.olymp_right:hover,
+.olymp_right:focus {
     background: url(../img/arrow-right.png) #F9FAFF no-repeat center;
     transform: none;
     transition: background-color .15s ease-in-out;
@@ -498,7 +503,7 @@ input[type=submit]:focus {
         flex-direction: column;
         justify-content: center;
     }
-    .olymp_arrow-left {
+    .olymp_left {
         margin-bottom: 10px;
     }
     .olymp_block-item {
