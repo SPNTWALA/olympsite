@@ -632,10 +632,12 @@ input[type=submit]:focus {
 .nav:hover .header_btn-profile {
     display: block;
 }
-.navbar {
+.nav_login {
     display: block;
     border: none;
     background-color: #DEFDFE;
+    height: auto;
+    width: auto;
 }
 .header_btn-profile {
     display: none;
