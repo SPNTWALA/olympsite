@@ -253,8 +253,8 @@
                     <div class="cont">
                         <p>Гаврилов Сергей Владимирович,</p>
                         <p>проректор по научной работе</p>
-                        <a class="link" href="tel:+7 (351) 220-85-85">+7 (351) 220-85-85, доб. 122</a><br>
-                        <a class="link" href="mailto:sno@inueco.ru">sno@inueco.ru</a>
+                        <a class="link link_tel" href="tel:+7 (351) 220-85-85">+7 (351) 220-85-85, доб. 122</a><br>
+                        <a class="link link_mail" href="mailto:sno@inueco.ru">sno@inueco.ru</a>
                     </div>
                 </div>
             </div>
@@ -289,18 +289,14 @@
                 <form action="#" method="post">
                     <h3 class="auth_name">Авторизация</h3>
                     <div class="form_info">
-                        <label>
-                            <input class="form_field" type="email" value="" placeholder="E-mail" required>
-                        </label>
+                        <input class="form_field" id="email" type="email" value="" placeholder="E-mail" required>
+                        <label for="email"></label>
                     </div>
                     <div class="form_info">
-                        <label>
-                            <input class="form_field" type="password" placeholder="Пароль" required>
-                        </label>
+                        <input class="form_field" id="password" type="password" placeholder="Пароль" required>
+                        <label for="password"></label>
                     </div>
-                    <label>
-                        <input class="olymp_block-btn" type="submit" value="Войти">
-                    </label>
+                    <input class="olymp_block-btn" type="submit" value="Войти">
                 </form>
                 <div class="olymp_link">
                     <a class="link olymp_link-txt" href="formPass.html">Восстановить пароль</a>
