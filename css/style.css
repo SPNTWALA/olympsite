@@ -66,6 +66,18 @@ input[type=submit]:focus {
     color: #EF6010;
     transition: .15s ease-in-out;
 }
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 5px;
+    width: 100%;
+    background-color: #EF6010;
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
 
 @media (max-width: 1110px) {
     .container {
@@ -156,12 +168,12 @@ input[type=submit]:focus {
 .banner {
     display: flex;
     justify-content: space-between;
-    background: url(../img/banner.png) no-repeat right center;
-    min-height: 523px;
+    max-height: 523px;
     padding-top: 105px;
+    overflow: hidden;
 }
 .banner_item {
-    width: 581px;
+    z-index: 2;
 }
 .banner_h1 {
     font-size: 45px;
@@ -175,13 +187,97 @@ input[type=submit]:focus {
     color: #A8A8A8;
     padding-top: 30px;
     line-height: 24px;
+    /* width: 581px; */
 }
 .banner_btn {
     border-radius: 6px;
     margin-top: 30px;
     padding: 14px 19px;
 }
+.banner_img {
+    position: relative;
+    top: -89px;
+    left: -70px;
+    z-index: 1;
+}
+.square_g {
+    position: relative;
+    top: -539px;
+    left: 16px;
+    animation: square-s 2s ease-in-out infinite;
+    z-index: 2;
+}
+.square_s {
+    position: relative;
+    top: -449px;
+    left: 446px;
+    animation: square-s 2s ease-in-out infinite;
+}
+.square_b {
+    position: relative;
+    top: -699px;
+    left: 245px;
+    animation: square-b 2s ease-in-out infinite;
+}
+.ellipse_g {
+    position: relative;
+    top: -702px;
+    left: 235px;
+    animation: ellipse-g 5s ease-in-out infinite;
+}
+.ellipse_o {
+    position: relative;
+    top: -931px;
+    left: 41px;
+    animation: ellipse-o 5s ease-in-out infinite;
+}
+@keyframes square-s {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes square-b {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes ellipse-g {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes ellipse-o {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
+@media (max-width: 992px) {
+    .banner {
+        padding-top: 52px;
+    }
+    .banner_img-item {
+        padding-top: 52px;
+    }
+}
 @media(max-width: 768px) {
     .banner {
         display: none;
@@ -408,7 +504,7 @@ input[type=submit]:focus {
     display: flex;
     align-items: center;
 }
-.olymp_left, .olymp_right {
+.olymp_prev, .olymp_next {
     width: 60px;
     height: 60px;
     border-radius: 7px;
@@ -416,21 +512,21 @@ input[type=submit]:focus {
     margin-right: 20px;
     border: none;
 }
-.olymp_left {
+.olymp_prev {
     background: url(../img/arrow-left.png) #EF6010 no-repeat center;
 }
-.olymp_right {
+.olymp_next {
     background: url(../img/arrow-left.png) #EF6010 no-repeat center;
     transform: rotate(-180deg);
 }
-.olymp_left:hover,
-.olymp_left:focus {
+.olymp_prev:hover,
+.olymp_prev:focus {
     background: url(../img/arrow-right.png) #F9FAFF no-repeat center;
     transform: rotate(-180deg);
     transition: background-color .15s ease-in-out;
 }
-.olymp_right:hover,
-.olymp_right:focus {
+.olymp_next:hover,
+.olymp_next:focus {
     background: url(../img/arrow-right.png) #F9FAFF no-repeat center;
     transform: none;
     transition: background-color .15s ease-in-out;
@@ -503,7 +599,7 @@ input[type=submit]:focus {
         flex-direction: column;
         justify-content: center;
     }
-    .olymp_left {
+    .olymp_prev {
         margin-bottom: 10px;
     }
     .olymp_block-item {
@@ -636,15 +732,16 @@ input[type=submit]:focus {
     display: block;
     border: none;
     background-color: #DEFDFE;
-    height: auto;
-    width: auto;
+    height: 50px;
+    width: 50px;
 }
 .header_btn-profile {
     display: none;
     position: absolute;
     background-color: #DEFDFE;
     box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.1);
-    transition: 0.5s ease-in-out;
+    animation: pofileOpen 0.3s ease-in-out forwards;
+    transform-origin: top center
 }
 .profile_btn, .out_btn {
     display: flex;
@@ -664,6 +761,19 @@ input[type=submit]:focus {
 }
 .show {
     display: block;
+}
+@keyframes pofileOpen {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+    50% {
+        transform: rotateX(-20deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }
 
 .olymp_task {

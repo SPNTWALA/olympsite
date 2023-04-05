@@ -45,8 +45,8 @@ stageTitles.forEach.call(stageTitles, function (stageTitle) {
 
 //slider
 const olympBlock = document.querySelectorAll('.wrapper_block');
-const rightBtn = document.querySelectorAll('.olymp_right');
-const leftBtn = document.querySelectorAll('.olymp_left');
+const rightBtn = document.querySelectorAll('.olymp_next');
+const leftBtn = document.querySelectorAll('.olymp_prev');
 olympBlock.forEach((item, i) => {
     let blockDemisions = item.getBoundingClientRect();
     let blockWidth = blockDemisions.width;
@@ -64,25 +64,33 @@ olympBlock.forEach((item, i) => {
             item.scrollLeft -= blockWidth;
         });
     }
+    else if (blockWidth >= 360) {
+        rightBtn[i].addEventListener('click', () => {
+            item.scrollLeft += blockWidth/2.5;
+        });
+        leftBtn[i].addEventListener('click', () => {
+            item.scrollLeft -= blockWidth/2.5;
+        });
+    }
 });
 
 const nav = document.getElementById("navbar-toggler");
 const menus = document.querySelectorAll(".formAuth");
 if (nav) {
     nav.addEventListener('click', () => {
-        for (let el of menus) {
-            el.classList.toggle("formAuth_open");
+        for (let elem of menus) {
+            elem.classList.toggle("formAuth_open");
         };
     }, true);
 };
 
 //menu
-const navbarBtn = document.getElementById("navbar");
+const navbarBtn = document.getElementById("nav_login");
 const menu = document.querySelectorAll(".header_btn-profile");
 if (navbarBtn) {
     navbarBtn.addEventListener('click', () => {
-        for (let el of menus) {
-            el.classList.toggle("show");
+        for (let e of menus) {
+            e.classList.toggle("show");
         };
     }, true);
 };
@@ -120,5 +128,16 @@ let spanNotice = document.getElementsByClassName("closeNotice")[0];
 if (spanNotice) {
     spanNotice.addEventListener('click', () => {
         modalNotice.classList.remove('noticeModal_open');
+    }, true);
+};
+
+// progressbar
+const progress = document.querySelector('.progress');
+const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+if (window) {
+    window.addEventListener('scroll', () => {
+        const windowScroll = window.pageYOffset;
+        const progressWidth = (windowScroll / windowHeight).toFixed(2);
+        progress.setAttribute('style', `transform: scaleX(${progressWidth});`);
     }, true);
 };

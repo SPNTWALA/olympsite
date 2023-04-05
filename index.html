@@ -26,7 +26,7 @@
                     </h1>
                 </div>
                 <button class="navbar-toggler" id="navbar-toggler" type="button">
-                    <img src="img/login.svg" width="50px">
+                    <img src="img/login.svg" alt="login" width="50px">
                 </button>
                 <div class="header_btn">
                     <button class="auth_btn">
@@ -54,9 +54,30 @@
                         </button>
                     </a>
                 </div>
+                <div class="banner_img-item">
+                    <div class="banner_img">
+                        <img  src="img/banner.png" alt="banner">
+                    </div>
+                    <div>
+                        <img class="square_g" src="img/square-green.png" alt="square">
+                    </div>
+                    <div>
+                        <img class="square_s" src="img/square-small.png" alt="square">
+                    </div>
+                    <div>
+                        <img class="square_b" src="img/square-big.png" alt="square">
+                    </div>
+                    <div>
+                        <img class="ellipse_g" src="img/ellipse-green.png" alt="ellipse">
+                    </div>
+                    <div>
+                        <img class="ellipse_o" src="img/ellipse-orange.png" alt="ellipse">
+                    </div>
+                </div>
             </div>
         </section>
     </header>
+    <div class="progress"></div>
     <main class="wrapper content">
         <section class="container">
             <div>
@@ -117,8 +138,8 @@
                 </a>
                 <div class="olymp_item">
                     <div class="olymp_arrow">
-                        <button class="olymp_left"></button>
-                        <button class="olymp_right"></button>
+                        <button class="olymp_prev"></button>
+                        <button class="olymp_next"></button>
                     </div>
                     <div class="wrapper_block">
                         <div class="olymp_block">
@@ -239,7 +260,7 @@
             </div>
         </section>
         <div class="footer_line">
-            <img src="img/line.png" alt="">
+            <img src="img/line.png" alt="line">
         </div>
         <section class="footer_confid">
             <div class="container confid_info">
@@ -265,15 +286,21 @@
                 <span class="closeAuth">
                     <img class="close-form" src="img/х.svg" alt="">
                 </span>
-                <form action="#">
+                <form action="#" method="post">
                     <h3 class="auth_name">Авторизация</h3>
                     <div class="form_info">
-                        <input class="form_field" type="email" value="" placeholder="E-mail" required>
+                        <label>
+                            <input class="form_field" type="email" value="" placeholder="E-mail" required>
+                        </label>
                     </div>
                     <div class="form_info">
-                        <input class="form_field" type="password" placeholder="Пароль" required>
+                        <label>
+                            <input class="form_field" type="password" placeholder="Пароль" required>
+                        </label>
                     </div>
-                    <input class="olymp_block-btn" type="submit" value="Войти">
+                    <label>
+                        <input class="olymp_block-btn" type="submit" value="Войти">
+                    </label>
                 </form>
                 <div class="olymp_link">
                     <a class="link olymp_link-txt" href="formPass.html">Восстановить пароль</a>
@@ -289,7 +316,7 @@
                 <span class="closeReg">
                     <img class="close-form" src="img/х.svg" alt="">
                 </span>
-                <form action="#">
+                <form action="#" method="post">
                     <h3 class="reg_name">Регистрация</h3>
                     <div class="form_info">
                         <input class="form_field" type="email" value="" placeholder="E-mail" required>
