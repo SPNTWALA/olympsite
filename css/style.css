@@ -184,7 +184,7 @@ input[type=submit]:focus {
 }
 .banner_text {
     font-size: 14px;
-    color: #929292;
+    color: #A2A2A2;
     padding-top: 30px;
     line-height: 24px;
     /* width: 581px; */
@@ -199,6 +199,8 @@ input[type=submit]:focus {
     top: -89px;
     left: -70px;
     z-index: 1;
+    width: 568px;
+    height: 508px;
 }
 .square_g {
     position: relative;
@@ -206,30 +208,40 @@ input[type=submit]:focus {
     left: 16px;
     animation: square-s 2s ease-in-out infinite;
     z-index: 2;
+    width: 52.29px;
+    height: 52.29px;
 }
 .square_s {
     position: relative;
     top: -449px;
     left: 446px;
     animation: square-s 2s ease-in-out infinite;
+    width: 42.33px;
+    height: 42.33px;
 }
 .square_b {
     position: relative;
     top: -699px;
     left: 245px;
     animation: square-b 2s ease-in-out infinite;
+    width: 126.45px;
+    height: 126.45px;
 }
 .ellipse_g {
     position: relative;
     top: -702px;
     left: 235px;
     animation: ellipse-g 5s ease-in-out infinite;
+    width: 194px;
+    height: 194px;
 }
 .ellipse_o {
     position: relative;
     top: -931px;
     left: 41px;
     animation: ellipse-o 5s ease-in-out infinite;
+    width: 299px;
+    height: 299px;
 }
 @keyframes square-s {
     0% {
@@ -370,8 +382,9 @@ input[type=submit]:focus {
         width: 38px;
         height: 36px;
     }
-    .polit {
-        padding-bottom: 5px;
+    .polit, .link_tel, 
+    .link_mail, .confid_name {
+        padding-bottom: 10px;
     }
 }
 
@@ -443,7 +456,7 @@ input[type=submit]:focus {
     text-align: start;
 }
 .stage_txt {
-    color: #929292;
+    color: #A2A2A2;
     font-size: 12px;
     padding: 3px 0 0 59px;
     line-height: 22px;
@@ -458,8 +471,8 @@ input[type=submit]:focus {
 .stage_img {
     border-radius: 20px;
     margin-top: -37px;
-    width: auto;
-    height: auto;
+    width: 635px;
+    height: 441px;
 }
 
 @media(max-width: 1110px) {
@@ -489,7 +502,7 @@ input[type=submit]:focus {
     margin-bottom: 20px;
 }
 .olymp_info {
-    color: #929292;
+    color: #A2A2A2;
     font-size: 14px;
     line-height: 24px;
 }
@@ -519,6 +532,9 @@ input[type=submit]:focus {
     padding: 17px 14px;
     margin-right: 20px;
     border: none;
+}
+.olymp_prev p, .olymp_next p {
+    display: none;
 }
 .olymp_prev {
     background: url(../img/arrow-left.png) #EF6010 no-repeat center;

@@ -139,8 +139,12 @@
                 </a>
                 <div class="olymp_item">
                     <div class="olymp_arrow">
-                        <button class="olymp_prev"></button>
-                        <button class="olymp_next"></button>
+                        <button class="olymp_prev">
+                            <p>button</p>
+                        </button>
+                        <button class="olymp_next">
+                            <p>button</p>
+                        </button>
                     </div>
                     <div class="wrapper_block">
                         <div class="olymp_block">
@@ -343,8 +347,8 @@
                         <textarea class="form_field-text inform" cols="30" rows="10" placeholder="Дополнительная информация"></textarea>
                     </div>
                     <div class="form_agree">
-                        <input class="agree" type="checkbox">
-                        <label>Согласен с <a class="link form_cond" href="agreement.html">условиями обработки</a> персональных данных</label>
+                        <input class="agree" type="checkbox" id="agree">
+                        <label for="agree">Согласен с <a class="link form_cond" href="agreement.html">условиями обработки</a> персональных данных</label>
                     </div>
                     <input onclick="sendRegJSON()" class="olymp_block-btn" type="submit" value="Регистрация">
                 </form>
