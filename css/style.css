@@ -201,7 +201,7 @@ input[type=submit]:focus {
     left: -70px;
     z-index: 1;
     width: 568px;
-    height: 508px;
+    height: 511px;
 }
 .square_g {
     position: relative;
@@ -209,24 +209,24 @@ input[type=submit]:focus {
     left: 16px;
     animation: square-s 2s ease-in-out infinite;
     z-index: 2;
-    width: 52.29px;
-    height: 52.29px;
+    width: 45px;
+    height: 45px;
 }
 .square_s {
     position: relative;
     top: -449px;
     left: 446px;
     animation: square-s 2s ease-in-out infinite;
-    width: 42.33px;
-    height: 42.33px;
+    width: 30px;
+    height: 30px;
 }
 .square_b {
     position: relative;
     top: -699px;
     left: 245px;
     animation: square-b 2s ease-in-out infinite;
-    width: 126.45px;
-    height: 126.45px;
+    width: 98px;
+    height: 98px;
 }
 .ellipse_g {
     position: relative;
