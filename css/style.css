@@ -142,6 +142,8 @@ input[type=submit]:focus {
     display: none;
     background-color: #DEFDFE;
     border: none;
+    width: 50px;
+    height: 53px;
 }
 
 @media(max-width: 992px) {
@@ -383,8 +385,9 @@ input[type=submit]:focus {
         height: 36px;
     }
     .polit, .link_tel, 
-    .link_mail, .confid_name {
+    .link_mail, .confid_name, .last_olymp {
         padding-bottom: 10px;
+        font-size: 17px;
     }
 }
 
@@ -532,9 +535,6 @@ input[type=submit]:focus {
     padding: 17px 14px;
     margin-right: 20px;
     border: none;
-}
-.olymp_prev p, .olymp_next p {
-    display: none;
 }
 .olymp_prev {
     background: url(../img/arrow-left.png) #EF6010 no-repeat center;
