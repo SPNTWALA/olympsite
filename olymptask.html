@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+    <script defer src="js/app.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,16 +70,16 @@
                         </p>
                     </div>
                     <p class="olymp_txt olymp_txt-bold">Загрузить задание</p>
-                    <form action="" class="olymp_task">
-                        <textarea class="form_field-text" name="" id="" cols="30" rows="10" placeholder="Ввести ответ"></textarea>
+                    <form action="#" class="olymp_task">
+                        <textarea class="form_field-text answer" name="" id="" cols="30" rows="10" placeholder="Ввести ответ"></textarea>
                         <label class="olymp_file">
-                            <input class="olymp_file-btn" type="file" name="" id="">
+                            <input class="olymp_file-btn file" type="file" name="" id="">
                             <span class="olymp_file-name">Выберите файл</span>
                             <span class="file_name" type="text">Файл не выбран</span>
                         </label>
                     </form>
                     <div class="olymp_send">
-                        <button class="btn olymp_block-btn btn_send">Отправить</button>
+                        <button onclick="sendFileJSON()" class="btn olymp_block-btn btn_send">Отправить</button>
                     </div>
                 </div>
             </div>

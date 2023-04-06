@@ -134,7 +134,7 @@ if (spanNotice) {
 // progressbar
 const progress = document.querySelector('.progress');
 const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-if (window) {
+if (progress) {
     window.addEventListener('scroll', () => {
         const windowScroll = window.pageYOffset;
         const progressWidth = (windowScroll / windowHeight).toFixed(2);

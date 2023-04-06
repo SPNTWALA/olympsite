@@ -184,7 +184,7 @@ input[type=submit]:focus {
 }
 .banner_text {
     font-size: 14px;
-    color: #A8A8A8;
+    color: #929292;
     padding-top: 30px;
     line-height: 24px;
     /* width: 581px; */
@@ -276,6 +276,14 @@ input[type=submit]:focus {
     }
     .banner_img-item {
         padding-top: 52px;
+    }
+}
+@media (max-width: 877px) {
+    .banner {
+        height: 360px;
+    }
+    .banner_img-item {
+        display: none;
     }
 }
 @media(max-width: 768px) {
@@ -435,7 +443,7 @@ input[type=submit]:focus {
     text-align: start;
 }
 .stage_txt {
-    color: #A8A8A8;
+    color: #929292;
     font-size: 12px;
     padding: 3px 0 0 59px;
     line-height: 22px;
@@ -481,7 +489,7 @@ input[type=submit]:focus {
     margin-bottom: 20px;
 }
 .olymp_info {
-    color: #A8A8A8;
+    color: #929292;
     font-size: 14px;
     line-height: 24px;
 }
