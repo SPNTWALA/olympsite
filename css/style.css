@@ -750,7 +750,8 @@ input[type=submit]:focus {
 }
 
 .nav:hover .header_btn-profile {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 .nav_login {
     display: block;
@@ -765,12 +766,13 @@ input[type=submit]:focus {
     background-color: #DEFDFE;
     box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.1);
     animation: pofileOpen 0.3s ease-in-out forwards;
-    transform-origin: top center
+    transform-origin: top center;
+    overflow-x: hidden;
 }
 .profile_btn, .out_btn {
     display: flex;
-    flex-direction: column;
-    padding: 12px;
+    padding: 11px;
+    padding-right: 50px;
     color: #335C5D;
     font-family: 'montserratmedium', sans-serif;
     border: none;
@@ -782,9 +784,6 @@ input[type=submit]:focus {
 .out_btn:hover,
 .out_btn:focus {
     color: #EF6010;
-}
-.show {
-    display: block;
 }
 @keyframes pofileOpen {
     0% {
@@ -847,7 +846,7 @@ input[type=submit]:focus {
     justify-content: space-around;
 }
 
-.sendModal, .noticeModal {
+.sendModal, .noticeModal,  .noticeModal-err {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -863,7 +862,7 @@ input[type=submit]:focus {
     background-color: rgba(0, 0, 0, 0.6);
     transition: 0.3s ease; 
 }
-.sendModal_open, .noticeModal_open {
+.sendModal_open, .noticeModal_open, .noticeModal_err-open {
     display: flex;
 }
 .modal_send, .notice_modal {
@@ -883,6 +882,11 @@ input[type=submit]:focus {
     padding-top: 15px;
 }
 
+@media (max-width: 1350px) {
+    .header_btn-profile {
+        right: 3%;
+    }
+}
 @media (max-width: 1110px) {
     .header_btn-profile {
         right: -1px;

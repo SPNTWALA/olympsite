@@ -4,6 +4,8 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://unpkg.com/imask@6.6.1/dist/imask.js"></script>
+    <script defer src="js/imask.js"></script>
     <script defer src="js/script.js"></script>
     <script defer src="js/app.js"></script>
     <meta charset="UTF-8">
@@ -287,7 +289,7 @@
                 <span class="closeAuth">
                     <img class="close-form" src="img/х.svg" alt="">
                 </span>
-                <form action="#" method="post">
+                <form id="auth" action="#" method="post">
                     <h3 class="auth_name">Авторизация</h3>
                     <div class="form_info">
                         <input class="form_field email" id="email" type="email" value="" placeholder="E-mail" required>
@@ -297,7 +299,7 @@
                         <input class="form_field password" id="password" type="password" placeholder="Пароль" required>
                         <label for="password"></label>
                     </div>
-                    <input onclick="sendAuthJSON()" class="olymp_block-btn" type="submit" value="Войти">
+                    <input class="olymp_block-btn" type="submit" value="Войти">
                 </form>
                 <div class="olymp_link">
                     <a class="link olymp_link-txt" href="formPass.html">Восстановить пароль</a>
@@ -313,7 +315,7 @@
                 <span class="closeReg">
                     <img class="close-form" src="img/х.svg" alt="">
                 </span>
-                <form action="#" method="post">
+                <form id="reg" action="#" method="post">
                     <h3 class="reg_name">Регистрация</h3>
                     <div class="form_info">
                         <input class="form_field email" type="email" value="" placeholder="E-mail" required>
@@ -334,20 +336,42 @@
                         <input class="form_field train" type="text" value="" placeholder="Направление подготовки" required>
                     </div>
                     <div class="form_info">
-                        <input class="form_field course" type="text" value="" placeholder="Курс" required>
+                        <input id="course" class="form_field course" type="text" value="" placeholder="Курс" required>
                     </div>
                     <div class="form_info">
-                        <input class="form_field phone" type="tel" value="" placeholder="Телефон" required>
+                        <input id="phone" class="form_field phone" type="tel" value="" placeholder="Телефон" required>
                     </div>
                     <div class="form_info">
                         <textarea class="form_field-text inform" cols="30" rows="10" placeholder="Дополнительная информация"></textarea>
                     </div>
                     <div class="form_agree">
-                        <input class="agree" type="checkbox" id="agree">
+                        <input class="agree" type="checkbox" id="agree" required>
                         <label for="agree">Согласен с <a class="link form_cond" href="agreement.html">условиями обработки</a> персональных данных</label>
                     </div>
-                    <input onclick="sendRegJSON()" class="olymp_block-btn" type="submit" value="Регистрация">
+                    <input class="olymp_block-btn btnReg" type="submit" value="Регистрация">
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="noticeModal">
+            <div class="notice_modal">
+                <span class="closeNotice">
+                    <img class="close-form" src="img/х.svg" alt="">
+                </span>
+                <p class="notice_text">Регистрация прошла успешно!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="noticeModal-err">
+            <div class="notice_modal">
+                <span class="closeNotice">
+                    <img class="close-form" src="img/х.svg" alt="">
+                </span>
+                <p class="notice_text">Не удалось!</p>
             </div>
         </div>
     </div>

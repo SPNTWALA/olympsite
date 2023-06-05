@@ -1,4 +1,4 @@
-// call forms
+// forms
 const btnOpenAuth = document.querySelector('.auth_btn');
 const formAuth = document.querySelector('.formAuth');
 if (btnOpenAuth) {
@@ -84,25 +84,9 @@ if (nav) {
     }, true);
 };
 
-//menu
-const navbarBtn = document.getElementById("nav_login");
-const menu = document.querySelectorAll(".header_btn-profile");
-if (navbarBtn) {
-    navbarBtn.addEventListener('click', () => {
-        for (let e of menus) {
-            e.classList.toggle("show");
-        };
-    }, true);
-};
-
 //send
 const btnSend = document.querySelector('.btn_send');
 const modalSend = document.querySelector('.sendModal');
-if (btnSend) {
-    btnSend.addEventListener('click', ()=>{
-        modalSend.classList.add('sendModal_open');
-    }, true);
-};
 let spanSend = document.getElementsByClassName("closeSend")[0];
 if (spanSend) {
     spanSend.addEventListener('click', () => {
@@ -116,18 +100,19 @@ if (spanCan) {
     }, true);
 };
 
-const btnAgree = document.querySelector('.btn_agree');
 const modalNotice = document.querySelector('.noticeModal');
-if (btnAgree) {
-    btnAgree.addEventListener('click', ()=>{
-        modalNotice.classList.add('noticeModal_open');
-        modalSend.classList.remove('sendModal_open');
-    }, true);
-};
 let spanNotice = document.getElementsByClassName("closeNotice")[0];
 if (spanNotice) {
     spanNotice.addEventListener('click', () => {
         modalNotice.classList.remove('noticeModal_open');
+    }, true);
+};
+
+const modalErr = document.querySelector('.noticeModal-err');
+let spanErr = document.getElementsByClassName("closeNotice")[0];
+if (spanErr) {
+    spanErr.addEventListener('click', () => {
+        modalErr.classList.remove('noticeModal_err-open');
     }, true);
 };
 
@@ -141,3 +126,14 @@ if (progress) {
         progress.setAttribute('style', `transform: scaleX(${progressWidth});`);
     }, true);
 };
+
+// file name
+const fileName = document.getElementById('file');
+if (fileName) {
+    fileName.addEventListener('change', (event) => {
+        const files = event.target.files;  
+        const loadName = document.getElementById('file_name');
+        loadName.innerHTML = `${files[0].name}`;
+        loadName.style.color = 'black';
+    }, true);
+}

@@ -31,19 +31,19 @@
                         <img src="img/login.svg" alt="login" width="50px">
                     </button>
                     <div class="header_btn-profile">
-                        <button class="profile_btn">
+                        <div class="profile_btn">
                             <a class="link" href="persAc.html">
                                 Профиль
                             </a>
-                        </button>
-                        <button class="profile_btn">
+                        </div>
+                        <div class="profile_btn myolymp">
                             <a class="link" href="myolymp.html">
                                 Мои олимпиады
                             </a>
-                        </button>
-                        <button class="out_btn">
+                        </div>
+                        <div class="out_btn">
                             Выйти
-                        </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                     <div class="olymp_name">
                         <img class="olymp_block-logo" src="img/it.svg" alt="">
                         <h1 class="olymp_h1">
-                            X Всероссийская олимпиада по информационным технологиям
+                            X Всероссийская олимпиада по государственному и муниципальному управлению
                         </h1>
                         <p class="olymp_date">актуально до 10 ноября</p>
                     </div>
@@ -70,17 +70,17 @@
                         </p>
                     </div>
                     <p class="olymp_txt olymp_txt-bold">Загрузить задание</p>
-                    <form action="#" class="olymp_task">
-                        <textarea class="form_field-text answer" name="" id="" cols="30" rows="10" placeholder="Ввести ответ"></textarea>
+                    <form id="task" action="#" class="olymp_task" method="post">
+                        <textarea class="form_field-text answer" value="" id="answer" cols="30" rows="10" placeholder="Ввести ответ"></textarea>
                         <label class="olymp_file">
-                            <input class="olymp_file-btn file" type="file" name="" id="">
+                            <input class="olymp_file-btn file" type="file" value="" id="file">
                             <span class="olymp_file-name">Выберите файл</span>
-                            <span class="file_name" type="text">Файл не выбран</span>
+                            <span class="file_name" id="file_name" type="text">Файл не выбран</span>
                         </label>
+                        <div class="olymp_send">
+                            <input class="btn olymp_block-btn btn_send" type="submit" value="Отправить">
+                        </div>
                     </form>
-                    <div class="olymp_send">
-                        <button onclick="sendFileJSON()" class="btn olymp_block-btn btn_send">Отправить</button>
-                    </div>
                 </div>
             </div>
         </section>
@@ -148,6 +148,17 @@
                     <img class="close-form" src="img/х.svg" alt="">
                 </span>
                 <p class="notice_text">Задание успешно отправлено!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="noticeModal-err">
+            <div class="notice_modal">
+                <span class="closeNotice">
+                    <img class="close-form" src="img/х.svg" alt="">
+                </span>
+                <p class="notice_text">Не удалось отправить задание!</p>
             </div>
         </div>
     </div>
