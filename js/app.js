@@ -36,6 +36,15 @@ async function sendAuth(e) {
     btnSend.addEventListener('click', ()=>{
       modalNotice.classList.add('noticeModal_err-open');
     });
+
+    
+    const modalErr = document.querySelector('.noticeModal-err');
+    let spanErr = document.getElementsByClassName("closeNotice")[0];
+    if (spanErr) {
+        spanErr.addEventListener('click', () => {
+            modalErr.classList.remove('noticeModal_err-open');
+        }, true);
+    };
   }
 
   return true
@@ -68,6 +77,15 @@ async function sendReg(e) {
     btnSend.addEventListener('click', ()=>{
       modalNotice.classList.add('noticeModal_err-open');
     });
+
+    
+    const modalErr = document.querySelector('.noticeModal-err');
+    let spanErr = document.getElementsByClassName("closeNotice")[0];
+    if (spanErr) {
+        spanErr.addEventListener('click', () => {
+            modalErr.classList.remove('noticeModal_err-open');
+        }, true);
+    };
   }
 
   return true
